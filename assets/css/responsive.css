@@ -1,0 +1,112 @@
+/* ============================================
+   NITHYA S & ASSOCIATES — Responsive
+   Breakpoints: 1200, 992, 768, 576
+   ============================================ */
+
+@media (max-width: 1200px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-us-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 992px) {
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: 1fr; }
+  .testimonials-grid { grid-template-columns: 1fr; }
+  .updates-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .timeline::before { left: 32px; }
+  .timeline-item,
+  .timeline-item:nth-child(odd) {
+    flex-direction: column;
+    text-align: left;
+    padding-left: 80px;
+    gap: var(--space-md);
+  }
+  .timeline-dot { left: 32px; }
+  .timeline-content { width: 100%; }
+}
+
+@media (max-width: 768px) {
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .services-page-grid { grid-template-columns: 1fr; }
+  .industries-grid { grid-template-columns: 1fr; }
+  .why-us-grid { grid-template-columns: 1fr; }
+  .updates-grid { grid-template-columns: 1fr; }
+  .trust-items { gap: var(--space-xl); }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+
+  .section-header { margin-bottom: var(--space-2xl); }
+
+  .page-hero {
+    padding: clamp(5rem, 10vw, 8rem) 0 clamp(2rem, 4vw, 3rem);
+  }
+
+  .cta-banner {
+    padding: var(--space-2xl);
+  }
+
+  .overview-visual::before,
+  .overview-visual::after { display: none; }
+
+  .overview-exp-badge {
+    right: var(--space-md);
+    bottom: var(--space-md);
+  }
+
+  .why-us-detail-card {
+    flex-direction: column;
+  }
+
+  .why-us-detail-card .wud-num {
+    font-size: var(--fs-h2);
+  }
+
+  .process-page-steps::before { left: 24px; }
+  .process-page-step .pps-number {
+    width: 48px; height: 48px; min-width: 48px;
+    font-size: var(--fs-body);
+  }
+}
+
+@media (max-width: 576px) {
+  html { font-size: 15px; }
+
+  .container { padding-left: var(--space-md); padding-right: var(--space-md); }
+
+  .btn { padding: 12px 24px; font-size: var(--fs-xs); }
+  .btn-lg { padding: 14px 28px; }
+
+  .section { padding-top: clamp(2.5rem, 6vw, 4rem); padding-bottom: clamp(2.5rem, 6vw, 4rem); }
+
+  .process-steps { grid-template-columns: 1fr; }
+
+  .floating-contact { bottom: var(--space-md); right: var(--space-md); }
+  .back-to-top { bottom: var(--space-md); left: var(--space-md); }
+
+  .floating-btn { width: 46px; height: 46px; }
+
+  .hero h1 { font-size: clamp(1.8rem, 6vw, 2.5rem); }
+  .hero-label { font-size: 0.65rem; padding: 6px 12px; }
+
+  .faq-categories { gap: var(--space-xs); }
+  .faq-cat-btn { padding: 8px 16px; font-size: var(--fs-xs); }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+  .newsletter-form .btn {
+    width: 100%;
+  }
+}
+
+/* ── Print Styles ── */
+@media print {
+  .navbar, .footer, .floating-contact, .back-to-top,
+  .scroll-progress, .page-loader { display: none !important; }
+  body { color: #000; background: #fff; }
+  a { color: #000; text-decoration: underline; }
+  .section { padding: 1rem 0; }
+}

@@ -1,0 +1,279 @@
+/* ============================================
+   NITHYA S & ASSOCIATES — Footer
+   4-Column Grid, Newsletter, Social, Copyright
+   ============================================ */
+
+.footer {
+  background: var(--gradient-dark);
+  color: var(--text-on-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Decorative gradient orb */
+.footer::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200, 164, 92, 0.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* ── Footer Main ── */
+.footer-main {
+  padding: var(--space-4xl) 0 var(--space-3xl);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: var(--space-3xl);
+}
+
+/* ── Footer Brand Column ── */
+.footer-brand .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  text-decoration: none;
+}
+
+.footer-brand .footer-logo-mark {
+  width: 44px;
+  height: 44px;
+  background: var(--gradient-gold);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-accent);
+  font-weight: var(--fw-bold);
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+.footer-brand .footer-logo-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-brand .footer-logo-name {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  color: var(--text-on-primary);
+}
+
+.footer-brand .footer-logo-tagline {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: var(--ls-widest);
+  color: var(--accent);
+}
+
+.footer-brand p {
+  color: var(--primary-200);
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-xl);
+  max-width: 320px;
+}
+
+/* Footer social icons */
+.footer-social {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.footer-social a {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-200);
+  transition: all 0.3s var(--ease-spring);
+  font-size: 0.9rem;
+}
+
+.footer-social a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* ── Footer Columns ── */
+.footer-column h4 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-semibold);
+  color: var(--text-on-primary);
+  margin-bottom: var(--space-xl);
+  position: relative;
+  padding-bottom: var(--space-sm);
+}
+
+.footer-column h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 32px;
+  height: 2px;
+  background: var(--gradient-gold);
+  border-radius: 1px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.footer-links a {
+  color: var(--primary-200);
+  font-size: var(--fs-small);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  transition: all 0.3s;
+  padding: 2px 0;
+}
+
+.footer-links a::before {
+  content: '';
+  width: 0;
+  height: 1.5px;
+  background: var(--accent);
+  transition: width 0.3s var(--ease-smooth);
+  border-radius: 1px;
+}
+
+.footer-links a:hover {
+  color: var(--accent-light);
+  transform: translateX(4px);
+}
+
+.footer-links a:hover::before {
+  width: 12px;
+}
+
+/* ── Footer Contact Info ── */
+.footer-contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.footer-contact-item {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-contact-item .fci-icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(200, 164, 92, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.footer-contact-item .fci-text {
+  font-size: var(--fs-small);
+  color: var(--primary-200);
+  line-height: var(--lh-relaxed);
+}
+
+.footer-contact-item .fci-text a {
+  color: var(--primary-200);
+}
+
+.footer-contact-item .fci-text a:hover {
+  color: var(--accent-light);
+}
+
+/* ── Footer Newsletter ── */
+.footer-newsletter {
+  margin-top: var(--space-xl);
+}
+
+.footer-newsletter p {
+  font-size: var(--fs-small);
+  color: var(--primary-200);
+  margin-bottom: var(--space-md);
+}
+
+/* ── Footer Bottom ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-xl) 0;
+}
+
+.footer-bottom .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.footer-copyright {
+  font-size: var(--fs-xs);
+  color: var(--primary-200);
+}
+
+.footer-copyright a {
+  color: var(--accent);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.footer-bottom-links a {
+  font-size: var(--fs-xs);
+  color: var(--primary-200);
+  transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--accent-light);
+}
+
+/* ── Responsive Footer ── */
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .footer-bottom .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+  }
+}

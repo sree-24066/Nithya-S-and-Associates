@@ -1,0 +1,162 @@
+/* ============================================
+   NITHYA S & ASSOCIATES — Contact Page Styles
+   ============================================ */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.contact-info-card {
+  display: flex;
+  gap: var(--space-lg);
+  padding: var(--space-xl);
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s var(--ease-spring);
+}
+
+.contact-info-card:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(200, 164, 92, 0.2);
+}
+
+.contact-info-card .cic-icon {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  border-radius: var(--radius-lg);
+  background: var(--gradient-primary);
+  color: var(--text-on-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.contact-info-card h4 {
+  font-size: var(--fs-body);
+  margin-bottom: 4px;
+}
+
+.contact-info-card p {
+  font-size: var(--fs-small);
+  color: var(--text-light);
+  margin: 0;
+}
+
+.contact-info-card a {
+  color: var(--text-light);
+}
+
+.contact-info-card a:hover {
+  color: var(--accent);
+}
+
+/* Contact Form */
+.contact-form-wrapper {
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-form-wrapper h3 {
+  margin-bottom: var(--space-xs);
+}
+
+.contact-form-wrapper > p {
+  color: var(--text-light);
+  margin-bottom: var(--space-xl);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+/* Map Section */
+.map-section {
+  margin-top: var(--space-3xl);
+}
+
+.map-wrapper {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  height: 400px;
+  background: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: var(--fs-body-lg);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Hours Card */
+.hours-card {
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.hours-card h4 {
+  font-size: var(--fs-h5);
+  margin-bottom: var(--space-lg);
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--bg-secondary);
+  font-size: var(--fs-small);
+}
+
+.hours-row:last-child {
+  border-bottom: none;
+}
+
+.hours-row .day {
+  color: var(--text-secondary);
+  font-weight: var(--fw-medium);
+}
+
+.hours-row .time {
+  color: var(--primary);
+  font-weight: var(--fw-semibold);
+}
+
+.hours-row .closed {
+  color: var(--error);
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

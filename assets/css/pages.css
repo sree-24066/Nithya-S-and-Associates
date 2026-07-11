@@ -1,0 +1,287 @@
+/* ============================================
+   NITHYA S & ASSOCIATES — Pages Styles
+   Industries, Why-Us, Process, FAQ, Legal, 404
+   ============================================ */
+
+/* ═══ Industries Page ═══ */
+.industries-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+}
+
+.industry-detail-card {
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  transition: all 0.4s var(--ease-spring);
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-detail-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--ease-smooth);
+}
+
+.industry-detail-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.industry-detail-card:hover::before {
+  transform: scaleX(1);
+}
+
+.industry-detail-card .idc-icon {
+  width: 64px; height: 64px;
+  border-radius: var(--radius-lg);
+  background: var(--primary-50);
+  color: var(--primary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: var(--space-lg);
+  transition: all 0.4s var(--ease-spring);
+}
+
+.industry-detail-card:hover .idc-icon {
+  background: var(--gradient-primary);
+  color: var(--text-on-primary);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.industry-detail-card h4 {
+  margin-bottom: var(--space-sm);
+}
+
+.industry-detail-card p {
+  font-size: var(--fs-small);
+  color: var(--text-light);
+}
+
+/* ═══ Why Us Page ═══ */
+.why-us-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-xl);
+}
+
+.why-us-detail-card {
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xl);
+  display: flex;
+  gap: var(--space-lg);
+  transition: all 0.4s var(--ease-spring);
+}
+
+.why-us-detail-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: rgba(200,164,92,0.2);
+}
+
+.why-us-detail-card .wud-num {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-extrabold);
+  color: var(--primary-50);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.why-us-detail-card h4 {
+  margin-bottom: var(--space-sm);
+}
+
+.why-us-detail-card p {
+  font-size: var(--fs-small);
+  color: var(--text-light);
+}
+
+/* ═══ Process Page ═══ */
+.process-page-steps {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.process-page-steps::before {
+  content: '';
+  position: absolute;
+  left: 32px;
+  top: 0; bottom: 0;
+  width: 2px;
+  background: var(--gradient-gold);
+}
+
+.process-page-step {
+  display: flex;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  position: relative;
+}
+
+.process-page-step .pps-number {
+  width: 64px; height: 64px;
+  min-width: 64px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-gold);
+  color: var(--primary-dark);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--fs-h4);
+  font-weight: var(--fw-bold);
+  position: relative;
+  z-index: 2;
+  box-shadow: var(--shadow-gold);
+}
+
+.process-page-step .pps-content {
+  background: var(--bg-card);
+  border: var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  flex: 1;
+  transition: all 0.4s var(--ease-spring);
+}
+
+.process-page-step .pps-content:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+.process-page-step h4 {
+  margin-bottom: var(--space-sm);
+}
+
+.process-page-step p {
+  font-size: var(--fs-small);
+  color: var(--text-light);
+}
+
+/* ═══ FAQ Page ═══ */
+.faq-categories {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-2xl);
+}
+
+.faq-cat-btn {
+  padding: 10px 22px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-smooth);
+}
+
+.faq-cat-btn:hover {
+  background: var(--primary-50);
+  color: var(--primary);
+}
+
+.faq-cat-btn.active {
+  background: var(--gradient-primary);
+  color: var(--text-on-primary);
+  border-color: var(--primary);
+}
+
+/* ═══ Legal Pages ═══ */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  font-size: var(--fs-h3);
+  margin: var(--space-2xl) 0 var(--space-md);
+}
+
+.legal-content h3 {
+  font-size: var(--fs-h4);
+  margin: var(--space-xl) 0 var(--space-md);
+}
+
+.legal-content p {
+  margin-bottom: var(--space-md);
+  line-height: var(--lh-relaxed);
+}
+
+.legal-content ul {
+  padding-left: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.legal-content ul li {
+  position: relative;
+  padding-left: var(--space-md);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-normal);
+}
+
+.legal-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px; height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+/* ═══ 404 Page ═══ */
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--bg-primary);
+  padding: var(--space-2xl);
+}
+
+.error-content .error-code {
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 15vw, 12rem);
+  font-weight: var(--fw-extrabold);
+  line-height: 1;
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-lg);
+}
+
+.error-content h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-md);
+}
+
+.error-content p {
+  font-size: var(--fs-body-lg);
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto var(--space-xl);
+}
+
+.error-content .error-actions {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
